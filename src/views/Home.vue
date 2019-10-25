@@ -1,12 +1,8 @@
 <template>
   <div class="home">
   	<HeaderComponent></HeaderComponent>
-   <!--  <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <div class="content">
-      <!-- <v-btn @click="register()" color="red">Info</v-btn> -->
       <!-- MODAL -->
-      
       <v-btn
         style="margin:10px"
         color="primary"
@@ -17,20 +13,12 @@
       </v-btn>
       <v-row justify="center">
         
-
         <v-dialog
           v-model="dialog"
           max-width="500"
         >
           <v-card style="padding:20px">
             <v-card-title class="headline">Create Account</v-card-title>
-
-            <!-- <v-card-text>
-              Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
-            </v-card-text> -->
-
-            <!-- COMPONENT NEW ACCOUNT -->
-            <!-- <newAccount></newAccount> -->
 
              <v-form
               ref="form"
@@ -62,9 +50,6 @@
                 label="Avatar URL"
               ></v-text-field>
 
-
-
-
               <v-checkbox
                 v-model="checkbox"
                 :rules="[v => !!v || 'You must agree to continue!']"
@@ -74,7 +59,7 @@
 
               <v-btn
                 :disabled="!valid"
-                color="success"
+                color="black"
                 class="mr-4"
                 @click="validate"
               >
@@ -96,9 +81,6 @@
                 Reset Validation
               </v-btn>
             </v-form>
-
-
-
 
             <v-card-actions>
               <v-spacer></v-spacer>
@@ -173,15 +155,11 @@ export default {
   },
   methods:{
     ...mapActions({chargeAccounts: "GET_ACCOUNTS"}),
-    // ...mapMutations({
-    //   add: 'AGREE_ACCOUNT' // map `this.add()` to `this.$store.commit('increment')`
-    // }),
     agree(){
 
        if (this.$refs.form.validate()) {
         this.snackbar = true
         this.dialog = false
-
         // await axios.post("https://reqres.in/api/register", {
         //   "email": "eve.holt@reqres.in",
         //   "password": "pistol"
@@ -203,20 +181,20 @@ export default {
     resetValidation () {
       this.$refs.form.resetValidation()
     },
-    async add(){
-      let res = await axios.post("https://reqres.in/api/users", {
-          "name": "walter",
-          "job": "cto"
-      })
-      console.log(res);
-    },
-    async register(){
-      let res = await axios.post("https://reqres.in/api/register", {
-        "email": "eve.holt@reqres.in",
-        "password": "pistol"
-    })
-      console.log(res);
-    }
+    // async add(){
+    //   let res = await axios.post("https://reqres.in/api/users", {
+    //       "name": "jorge",
+    //       "job": "cto"
+    //   })
+    //   console.log(res);
+    // },
+    // async register(){
+    //   let res = await axios.post("https://reqres.in/api/register", {
+    //     "email": "eve.holt@reqres.in",
+    //     "password": "pistol"
+    // })
+      // console.log(res);
+    // }
   }
 }
 </script>
