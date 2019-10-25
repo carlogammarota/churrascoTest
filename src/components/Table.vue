@@ -4,7 +4,7 @@
 	    :items="Accounts"
 	    class="elevation-1"
 	  >
-	    <template v-slot:item.avatar="{ item }">
+	    <template style="height:10px !important" v-slot:item.avatar="{ item }">
         <v-avatar >
           <img
             :src="item.avatar"
@@ -55,3 +55,8 @@ import { mapGetters } from 'vuex';
     },
   }
 </script>
+<style >
+.v-data-table td {
+  height: 88px !important; 
+}
+</style>

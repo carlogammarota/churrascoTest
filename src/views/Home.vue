@@ -106,7 +106,7 @@
           </v-card>
         </v-dialog>
       </v-row>      
-      <h3 style="margin:10px">Listado de Clientes</h3>  
+      <h3 style="margin:10px">Account List</h3>  
     	<Table></Table>
       
     </div>
