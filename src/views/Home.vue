@@ -204,5 +204,7 @@ export default {
 }
 </script>
 <style>
-
+ .content {
+    margin-top: 20px;
+ }
 </style>
