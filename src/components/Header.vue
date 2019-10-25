@@ -9,6 +9,7 @@
         
         <!-- <v-btn text>Carlo Gammarota</v-btn> -->
         <v-btn text>{{user}}</v-btn> 
+        
         <!-- <v-btn text>Link 3</v-btn> -->
       </v-toolbar-items>
 
@@ -19,8 +20,10 @@
         <v-btn icon>
           <v-icon>mdi-delete-circle</v-icon>
         </v-btn> -->
-        <v-btn @click="logout()" icon>
-          <v-icon>mdi-logout</v-icon>
+        <v-btn @click="logout()" >
+          <!-- <v-icon>mdi-logout</v-icon> -->
+          <!-- <i class="fas fa-sign-out-alt"></i> -->
+          LOGOUT
         </v-btn>
       </template>
     </v-toolbar>
