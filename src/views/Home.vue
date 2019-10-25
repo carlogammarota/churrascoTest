@@ -58,8 +58,9 @@
               ></v-checkbox>
 
               <v-btn
+                style="color=black"
                 :disabled="!valid"
-                color="black"
+                
                 class="mr-4"
                 @click="validate"
               >
@@ -67,7 +68,7 @@
               </v-btn>
 
               <v-btn
-                color="error"
+                style="color:black"
                 class="mr-4"
                 @click="reset"
               >
@@ -75,7 +76,7 @@
               </v-btn>
 
               <v-btn
-                color="warning"
+                style="color:black"
                 @click="resetValidation"
               >
                 Reset Validation
@@ -86,6 +87,7 @@
               <v-spacer></v-spacer>
 
               <v-btn
+                style="color:black"
                 color="green darken-1"
                 text
                 @click="dialog = false"
