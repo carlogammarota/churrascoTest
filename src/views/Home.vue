@@ -110,6 +110,7 @@
     	<Table></Table>
       
     </div>
+    <footerComponent>asd</footerComponent>
   </div>
 </template>
 
@@ -118,6 +119,7 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 import HeaderComponent from '../components/Header.vue'
 import Table from '../components/Table.vue'
+import footerComponent from '../components/Footer.vue'
 // import newAccount from '../components/newAccount.vue'
 import { mapActions } from 'vuex';
 import axios from "axios"
@@ -150,6 +152,7 @@ export default {
   components: {
     HeaderComponent,
     Table,
+    footerComponent
     // newAccount
   },
   mounted(){
