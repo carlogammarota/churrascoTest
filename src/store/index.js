@@ -5,10 +5,12 @@ import VuexPersistence from 'vuex-persist'
 
 Vue.use(Vuex)
 const vuexLocal = new VuexPersistence({
+  key: 'my-app',
   storage: window.sessionStorage
 })
 
 export default new Vuex.Store({
+  // transpileDependencies: ['vuex-persist'],
   state: {
     token: null,
     status: null,
